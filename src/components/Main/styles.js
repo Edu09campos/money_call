@@ -29,4 +29,8 @@ export default makeStyles((theme) => ({
     fontWeight: "bold",
     color: "green",
   },
+  neutral: {
+    fontWeight: "bold",
+    color: "gold",
+  },
 }));

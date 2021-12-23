@@ -9,13 +9,14 @@ function App() {
   const classes = useStyles();
 
   return (
-    <main className={classes.content}>
+    <main>
       <Grid
         className={classes.grid}
         container
         spacing={0}
         alignItems="center"
         justifyContent="center"
+        style={{ minHeight: "89vh" }}
       >
         <Grid item xs={12} sm={3} className={classes.mobile}>
           <Details title="Income" />

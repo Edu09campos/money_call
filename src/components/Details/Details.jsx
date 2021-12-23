@@ -16,8 +16,16 @@ const Details = ({ title }) => {
     <Card className={title === "Income" ? classes.income : classes.expense}>
       <CardHeader title={title} />
       <CardContent>
-        <Typography variant="h5">${total}</Typography>
-        <Doughnut data={chartData} />
+        <Typography variant="h5">
+          {total === 0 ? `Insert an ${title} entry.` : `$${total}`}
+        </Typography>
+        {total === 0 ? (
+          <Typography className={classes.info} variant="h6">
+            No data available
+          </Typography>
+        ) : (
+          <Doughnut data={chartData} />
+        )}
       </CardContent>
     </Card>
   );
